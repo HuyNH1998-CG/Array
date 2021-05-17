@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ARREX2</title>
+</head>
+<body>
+<script>
+    let a = window.prompt();
+    let str = a.toString();
+    let rsl = [str[0]];
+    for (let x = 1; x < str.length; x++) {
+        if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
+            rsl.push('-', str[x]);
+        } else {
+            rsl.push(str[x]);
+        }
+    }
+    console.log(rsl.join(''))
+
+</script>
+</body>
+</html>

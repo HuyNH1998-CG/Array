@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = window.prompt();
+    let up = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let down = 'abcdefghijklmnopqrstuvwxyz';
+    let resl = [];
+    for (let i = 0; i < x.length; i++) {
+        if (up.indexOf(x[i]) !== -1) {
+            resl.push(x[i].toLowerCase());
+        } else if (down.indexOf(x[i]) !== -1) {
+            resl.push(x[i].toUpperCase());
+        } else {
+            resl.push(x[i]);
+        }
+    }
+    alert(resl.join(''))
+</script>
+</body>
+</html>
