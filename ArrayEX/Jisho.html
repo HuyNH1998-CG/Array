@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TuDien</title>
+</head>
+<body>
+<form>
+    <h1>Tu Dien Nay Rat Can Duoc Nang Cap <br> Hien Tai No Chi Co "ca, cho, meo, khi"</h1>
+    Nhap Tu Can Tim<input type="text" id="ENG"><br>
+    <button type="button" value="TimKiem" onclick="Tim()">Tim Kiem</button>
+    <script>
+        let eng = ["Fish", "Dog", 'cat', 'monkey']
+        let vn = ['ca', 'cho', 'meo', 'khi']
+
+        function Tim() {
+            let val = document.getElementById('ENG').value;
+            for (let i = 0; i < eng.length; i++) {
+                if (val == eng[i]) {
+                    for (let j = 0; j < vn.length; j++) {
+                        if (i == j) {
+                            alert("Tu do la: " + vn[j])
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
