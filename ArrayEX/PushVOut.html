@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Push V Out</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr.push(prompt("Input to arr " + i))
+    }
+
+    let V = prompt("input V")
+    for (let j = 0; j < arr.length; j++) {
+        if (V== arr[j]) {
+            arr.pop(arr[j]);
+            arr.push(0);
+            break;
+        }
+    }
+    document.write(arr)
+</script>
+</body>
+</html>

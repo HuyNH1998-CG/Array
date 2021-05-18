@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISVHERE</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr.push(prompt("Input to arr " + i))
+    }
+    let V = prompt("Input V");
+    for (let j = 0; j < arr.length; j++) {
+        if (V == arr[j]) {
+            alert("V is In Array");
+            break;
+        }
+        alert('V Is Not In Array');
+        break;
+    }
+    //let arr = [];
+    //    for (let i = 0; i < 10; i++) {
+    //       arr.push(prompt("Input to arr "+i))
+    //   }
+    //   let V = prompt("Input V");
+    //   for (let j = 0; j < arr.length;j++) {
+    //       if (V == arr[j]) {
+    //           alert("V is Here");
+    //           break;
+    //       }
+    //       alert('V Is Not Here');
+    //       V = prompt('Input V again maybe now its here');
+    //   }
+</script>
+</body>
+</html>

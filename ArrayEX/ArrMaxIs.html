@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maxis</title>
+</head>
+<body>
+<script>
+    let arr = [0, 1, 5, 10, 200, 30, 500, 700, 20, 50];
+    let max = arr[0]
+    let index = 0
+    for (i = 0; i <= arr.length; i++) {
+        if (arr[i]>max){
+            max = arr[i]
+        }
+    }
+    console.log("Max: " + max + " At " + arr.indexOf(max))
+</script>
+</body>
+</html>
