@@ -52,36 +52,106 @@
             }
         }
         b.innerHTML = "<hr/>" + data
+        checkO()
     }
 
     data += "<br/><br/><input type='button' value='Change' onclick='ChangeVal()'>";
 
     function checkX() {
-        for (i = 0; i < board.length; i++) {
-            for (j = 0; j < board[i].length; j++) {
-                if (board[0][0] == "X") {
-                    if (board[0][1] == "X") {
-                        if (board[0][2] == "X") {
-                            alert("win");
-                            break;
-                        }
-                    } else if (board[1][1] == "X") {
-                        if (board[2][2] == "X") {
-                            alert("win");
-                            break;
-                        }
-                    } else if (board[1][0] == "X") {
-                        if (board[2][0] == "X") {
-                            alert("win");
-                            break;
-                        }
-                    }
+        if (board[0][0] == "X") {
+            if (board[0][1] == "X") {
+                if (board[0][2] == "X") {
+                    alert("win");
+                }
+            } else if (board[1][1] == "X") {
+                if (board[2][2] == "X") {
+                    alert("win");
+                }
+            } else if (board[1][0] == "X") {
+                if (board[2][0] == "X") {
+                    alert("win");
                 }
             }
-            break;
+        } else if (board[0][1] == "X") {
+            if (board[1][1] == "X") {
+                if (board[2][1] == 'X') {
+                    alert("win");
+                }
+            }
+        } else if (board[0][2] == "X") {
+            if (board[1][2] == "X") {
+                if (board[2][2] == 'X') {
+                    alert("win");
+                }
+            }
+        } else if (board[1][0] == "X") {
+            if (board[1][1] == "X") {
+                if (board[1][2] == 'X') {
+                    alert("win");
+                }
+            }
+        } else if (board[2][0] == "X") {
+            if (board[2][1] == "X") {
+                if (board[2][2] == 'X') {
+                    alert("win");
+                }
+            }
+        } else if (board[0][2] == "X") {
+            if (board[1][1] == 'X') {
+                if (board[2][0] == 'X') {
+                    alert("win");
+                }
+            }
+
         }
     }
-
+    function checkO() {
+        if (board[0][0] == "O") {
+            if (board[0][1] == "O") {
+                if (board[0][2] == "O") {
+                    alert("win");
+                }
+            } else if (board[1][1] == "O") {
+                if (board[2][2] == "O") {
+                    alert("win");
+                }
+            } else if (board[1][0] == "O") {
+                if (board[2][0] == "O") {
+                    alert("win");
+                }
+            }
+        } else if (board[0][1] == "O") {
+            if (board[1][1] == "O") {
+                if (board[2][1] == 'O') {
+                    alert("win");
+                }
+            }
+        } else if (board[0][2] == "O {
+            if (board[1][2] == "O") {
+                if (board[2][2] == 'O') {
+                    alert("win");
+                }
+            }
+        } else if (board[1][0] == "O") {
+            if (board[1][1] == "O") {
+                if (board[1][2] == 'O') {
+                    alert("win");
+                }
+            }
+        } else if (board[2][0] == "O") {
+            if (board[2][1] == "O") {
+                if (board[2][2] == 'O') {
+                    alert("win");
+                }
+            }
+        } else if (board[0][2] == "O") {
+            if (board[1][1] == 'O') {
+                if (board[2][0] == 'O') {
+                    alert("win");
+                }
+            }
+        }
+    }
 
 </script>
 </body>
