@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TXTAREA</title>
+</head>
+<body>
+<h2>Something Here</h2>
+<textarea name="" id="none" cols="30" rows="10" onkeydown="txtarea()"></textarea>
+<script>
+    let a = ["O", 'M', 'A', 'E', 'H', 'A', 'M', 'O', 'U', 'S', 'H', 'I', 'N', 'D', 'E', 'I', 'R', 'U']
+    let n = '';
+
+    function txtarea() {
+        let txt = document.getElementById("none").value;
+        let go = txt.length;
+        if (go > 0) {
+            for (let i = 0; i < go; i++) {
+                n += a[i];
+                if (i == 18) {
+                    document.getElementById("none").value = ''
+                    n = ''
+                }
+            }
+        }
+        document.getElementById("none").value = n
+        n = '';
+        setTimeout('txtarea()',1)
+    }
+</script>
+</body>
+</html>

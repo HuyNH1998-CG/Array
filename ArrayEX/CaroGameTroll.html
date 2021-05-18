@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TrollGame</title>
+</head>
+<body>
+<img src="../th.jpg" height="160" width="289"/>
+<p id="caro"></p>
+<button type="button" value="X" onclick="X()"> X</button>
+<button type="button" value="O" onclick="O()"> O</button>
+<div data-></div>
+<script>debugger
+    let b = document.getElementById("caro");
+    let board = []
+    let data = "";
+    for (let i = 0; i < 3; i++) {
+        board[i] = Array(".", ".", ".");
+    }
+    for (let i = 0; i < 3; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 3; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+    b.innerHTML = data
+    function X() {
+        let positionX = prompt("x: input range 0 - 2");
+        let positionY = prompt("Y: input range 0 - 2");
+        data = "";
+        board [positionX][positionY] = "x";
+        for (let i = 0; i < 3; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 3; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        b.innerHTML = "<hr/>" + data
+    }    function O() {
+        let positionX = prompt("x: input range 0 - 2");
+        let positionY = prompt("Y: input range 0 - 2");
+        data = "";
+        board [positionX][positionY] = "O";
+        for (let i = 0; i < 3; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 3; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        b.innerHTML = "<hr/>" + data
+    }
+    data += "<br/><br/><input type='button' value='Change' onclick='ChangeVal()'>";
+</script>
+</body>
+</html>
