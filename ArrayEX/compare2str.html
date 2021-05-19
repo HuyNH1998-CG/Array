@@ -6,11 +6,15 @@
 </head>
 <body>
 <script>
-  let a = [1,2,3,4,5];
-  let b = [1,2,3,4,5];
-  if (a.toString() === b.toString()){
-    alert("there are duplicate array")
-  }
+    //  let a = [1,2,3,4,5];
+    //  let b = [1,2,3,4,5];
+    //  if (a.toString() === b.toString()){
+    //   alert("there are duplicate array")
+    // }
+    let a = prompt("Input String a");
+    let b = prompt("Input String b");
+    let result = a.localeCompare(b);
+    document.write(result + "0 mean 2 string are the same. 1 or -1 mean 2 string are different")
 </script>
 </body>
 </html>

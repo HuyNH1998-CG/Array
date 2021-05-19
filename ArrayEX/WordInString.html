@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word In String</title>
+</head>
+<body>
+<script>
+    //    let arr = ['Dog', 'Cat', 'Monkee', 1, 2, 3, 4, 5];
+    //  for (i = 0; i < arr.length; i++){
+    //    if (typeof arr[i] === 'string') {
+    //      console.log(arr[i])
+    //}
+    // }
+    //document.write("This array is " + arr.length + "long. Open console to see what are the words in the array")
+    let a = prompt("Input String");
+
+    function wordCount(str) {
+        str = str.replace(/(^\s*)|(\s*$)/gi, "");
+        str = str.replace(/[ ]{2,}/gi, "");
+        str = str.replace(/\n /, "\n");
+        count = str.split('').length;
+        return count;
+    }
+    document.write("This string have " + wordCount(a) +" Word")
+</script>
+</body>
+</html>
